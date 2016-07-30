@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#BBBBBB"
+        android:gravity="center"
+        android:text="Kotori"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <RelativeLayout
+        android:id="@+id/layout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#BBBBBB"
+        android:columnCount="4"
+        
+        android:padding="5dp" >
+
+        <EditText
+            android:id="@+id/chat_text"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="24dp"
+            android:ems="10"
+            android:inputType="textMultiLine" />
+
+        <Button
+            android:id="@+id/post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/chat_text"
+            android:background="@drawable/post" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/ChatListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/layout1"
+        android:layout_below="@id/textView1"
+        android:listSelector="#00000000"
+        android:transcriptMode="alwaysScroll"
+        android:divider="@null"
+        android:dividerHeight="2dp" >
+    </ListView>
+
+</RelativeLayout>
